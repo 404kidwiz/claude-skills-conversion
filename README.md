@@ -321,10 +321,10 @@ security-auditor-skill:
 
 ```bash
 # Clone the repository
-git clone https://github.com/404kidwiz/claude-code-super-skills.git ~/claude-code-super-skills
+git clone https://github.com/404kidwiz/claude-supercode-skills.git ~/claude-supercode-skills
 
 # Install all 133 skills
-cp -r ~/claude-code-super-skills/* ~/.claude/skills/
+cp -r ~/claude-supercode-skills/* ~/.claude/skills/
 
 # Restart Claude Code to load skills
 claude
@@ -414,7 +414,7 @@ Skills trigger automatically when:
 
 ## 📝 Repository
 
-**https://github.com/404kidwiz/claude-code-super-skills**
+**https://github.com/404kidwiz/claude-supercode-skills**
 
 **License:** MIT - Free to use, modify, and distribute
 
