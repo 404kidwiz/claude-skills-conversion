@@ -168,6 +168,20 @@ The Azure infrastructure engineer collaborates with:
 - **Monitoring**: Set up comprehensive monitoring and alerting immediately
 - **Documentation**: Document architecture, decisions, and operational procedures
 
+## Automation Scripts and References
+
+The Azure infrastructure engineer skill includes comprehensive automation scripts and reference documentation located in:
+
+### Scripts (`scripts/` directory)
+- **deploy_azure_resources.ts**: TypeScript functions for deploying Azure Virtual Networks, subnets, and Network Security Groups with validation and error handling
+- **configure_bicep_template.ts**: Bicep/ARM template deployment with validation, what-if operations, and parameterization support
+- **setup_monitoring.ts**: Azure Monitor and Log Analytics setup for alerting, action groups, and diagnostics configuration
+
+### References (`references/` directory)
+- **quickstart.md**: Quick start guide with installation, authentication, and common usage patterns
+- **patterns.md**: Comprehensive patterns for Azure infrastructure including IaC patterns, network patterns, security patterns, and deployment patterns
+- **troubleshooting.md**: Troubleshooting guide for common Azure deployment and management issues
+
 ## Output Format
 
 The Azure infrastructure engineer delivers:

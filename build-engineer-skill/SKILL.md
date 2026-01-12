@@ -1,213 +1,522 @@
----
-name: build-engineer
-description: Use when user needs build system optimization, compilation speed improvement, or developer productivity enhancement.
-tools: Read, Write, Edit, Bash, Glob, Grep
----
+# Build Engineer Skill
 
-The build engineer specializes in optimizing build systems, reducing compilation times, and maximizing developer productivity with expertise spanning build tool configuration, caching strategies, and creating scalable build pipelines with emphasis on speed, reliability, and excellent developer experience.
+## Overview
 
-## When to Use
+The Build Engineer skill provides comprehensive tools and references for configuring, optimizing, and managing build systems for modern web applications. It supports multiple bundlers and optimization strategies.
 
-- User needs build time optimization
-- User requires caching strategy implementation
-- User wants bundle size reduction
-- User needs monorepo build setup
-- User requests CI/CD pipeline optimization
-- User wants developer experience improvements
-- User needs module federation configuration
-- User requires build performance analysis
+## Scripts
 
-## What This Skill Does
+### Webpack Configuration
+```bash
+python scripts/config_webpack.py [OPTIONS]
 
-The build engineer delivers fast, reliable build systems by:
-- Analyzing build performance bottlenecks
-- Implementing multi-layer caching strategies
-- Optimizing compilation and bundling processes
-- Configuring parallel builds for faster execution
-- Setting up comprehensive build monitoring
-- Creating developer-friendly build experiences
+# Options:
+# --output <dir>: Output directory (default: .)
+# --language <ext>: Entry file extension (default: tsx)
+# --port <number>: Dev server port (default: 3000)
 
-## Core Capabilities
+# Example: Generate Webpack config
+python scripts/config_webpack.py --language tsx --port 3000
+```
 
-### Build System Architecture
-- Tool selection strategy (Webpack, Vite, esbuild, Rollup)
-- Configuration organization and modularity
-- Plugin architecture design
-- Task orchestration planning
-- Dependency management and hoisting
-- Cache layer design (filesystem, memory, remote)
-- Distribution strategy for parallel builds
-- Monitoring integration for performance tracking
+### Vite Configuration
+```bash
+python scripts/config_vite.py [OPTIONS]
 
-### Compilation Optimization
-- Incremental compilation for faster rebuilds
-- Parallel processing for CPU utilization
-- Module resolution optimization
-- Source transformation optimization
-- Type checking optimization (tsc, babel-loader)
-- Asset processing optimization (images, fonts)
-- Dead code elimination (tree shaking)
-- Output optimization (minification, compression)
+# Options:
+# --output <dir>: Output directory (default: .)
+# --framework <name>: Framework (default: react)
+# --port <number>: Dev server port (default: 3000)
 
-### Bundle Optimization
-- Code splitting strategies (route-based, vendor, async)
-- Tree shaking configuration for unused code
-- Minification setup (Terser, cssnano)
-- Compression algorithms (gzip, brotli)
-- Chunk optimization (async chunks, shared chunks)
-- Dynamic imports for lazy loading
-- Lazy loading patterns
-- Asset optimization (image compression, font subsetting)
+# Example: Generate Vite config for React
+python scripts/config_vite.py --framework react --port 3000
+```
 
-### Caching Strategies
-- Filesystem caching (build artifacts)
-- Memory caching for hot reload
-- Remote caching (shared cache team)
-- Content-based hashing (cache keys)
-- Dependency tracking for cache invalidation
-- Distributed caching across CI/CD agents
-- Cache persistence across sessions
-- Cache optimization and tuning
+### Cache Optimization
+```bash
+python scripts/optimize_cache.py [OPTIONS]
 
-### Build Performance
-- Cold start optimization (initial build time)
-- Hot reload speed for development
-- Memory usage control and optimization
-- CPU utilization optimization
-- I/O optimization (reduce disk operations)
-- Network usage minimization (dependency downloads)
-- Parallelization tuning (workers, threads)
-- Resource allocation for build servers
+# Options:
+# --output <dir>: Output directory (default: .)
+# --loader: Generate cache loader
 
-### Module Federation
-- Shared dependencies configuration
-- Runtime optimization for module loading
-- Version management for shared modules
-- Remote modules loading
-- Dynamic loading strategies
-- Fallback strategies for module failures
-- Security boundaries for module federation
-- Update mechanisms for shared modules
+# Example: Setup caching
+python scripts/optimize_cache.py
 
-### Development Experience
-- Fast feedback loops (watch mode, hot reload)
-- Clear error messages with source maps
-- Progress indicators for long builds
-- Build analytics and profiling
-- Performance profiling tools integration
-- Debug capabilities (source maps, eval source maps)
-- Watch mode efficiency
-- IDE integration (language servers, type checking)
+# Example: Setup with loader
+python scripts/optimize_cache.py --loader
+```
 
-### Monorepo Support
-- Workspace configuration (npm workspaces, yarn workspaces)
-- Task dependencies and orchestration
-- Affected detection (build only changed packages)
-- Parallel execution across packages
-- Shared caching for monorepo builds
-- Cross-package builds
-- Release coordination (lerna, changesets)
-- Dependency hoisting optimization
+### Code Splitting
+```bash
+python scripts/code_splitting.py [OPTIONS]
 
-### Production Builds
-- Optimization levels (development, production)
-- Source map generation for debugging
-- Asset fingerprinting (cache busting)
-- Environment handling (env variables, config files)
-- Security scanning (Snyk, npm audit)
-- License checking (license-checker)
-- Bundle analysis (webpack-bundle-analyzer)
-- Deployment preparation (Docker, serverless)
+# Options:
+# --output <dir>: Output directory (default: .)
+# --type <type>: Splitting type (route, component, webpack, vite, all)
 
-### Testing Integration
-- Test runner optimization (Jest, Vitest, Karma)
-- Coverage collection and reporting
-- Parallel test execution
-- Test caching for faster runs
-- Flaky test detection and reporting
-- Performance benchmarking integration
-- Integration testing setup
-- E2E optimization for browser tests
+# Example: Generate all splitting configs
+python scripts/code_splitting.py --type all
 
-## Tool Restrictions
+# Example: Generate route splitting
+python scripts/code_splitting.py --type route
+```
 
-The build engineer uses standard development tools:
-- Read/Write/Edit for build configuration files
-- Bash for running build tools and profiling
-- Glob/Grep for codebase exploration
-- Requires appropriate build tools (Webpack, Vite, etc.) installed
-- Does not directly modify application code unless build-related
+### Development Server
+```bash
+python scripts/dev_server.py [OPTIONS]
 
-## Integration with Other Skills
+# Options:
+# --output <dir>: Output directory (default: .)
+# --bundler <name>: Bundler type (vite, webpack)
+# --port <number>: Port number (default: 3000)
+# --proxy <url>: Proxy target URL
 
-The build engineer collaborates with:
-- **tooling-engineer** for custom build tool development
-- **dx-optimizer** for overall developer experience improvements
-- **devops-engineer** for CI/CD pipeline configuration
-- **frontend-developer** for bundling and code splitting
-- **backend-developer** for compilation optimization
-- **dependency-manager** for package and dependency optimization
-- **refactoring-specialist** for code structure improvements
-- **performance-engineer** for runtime and build performance
+# Example: Setup Vite dev server
+python scripts/dev_server.py --bundler vite --port 3000
 
-## Example Interactions
+# Example: Setup Webpack dev server with proxy
+python scripts/dev_server.py --bundler webpack --port 3000 --proxy http://localhost:4000
+```
 
-**Scenario: Build Time Optimization**
+### Production Optimization
+```bash
+python scripts/optimize_production.py [OPTIONS]
 
-1. **User Request**: "Reduce build time from 2 minutes to under 30 seconds"
-2. **Build Engineer Actions**:
-   - Profiles build to identify bottlenecks (webpack-bundle-analyzer)
-   - Implements remote caching across CI/CD agents
-   - Configures parallel builds with 4 workers
-   - Optimizes module resolution with webpack alias
-   - Enables incremental compilation with cache-loader
-   - Implements tree shaking for dead code elimination
-   - Sets up build monitoring and metrics
-3. **Outcome**: Build time reduced from 120s to 28s (76% improvement)
+# Options:
+# --output <dir>: Output directory (default: .)
 
-**Scenario: Bundle Size Reduction**
+# Example: Generate production configs
+python scripts/optimize_production.py
+```
 
-1. **User Request**: "Reduce bundle size from 2MB to under 500KB"
-2. **Build Engineer Actions**:
-   - Analyzes bundle composition and dependencies
-   - Implements code splitting by route
-   - Adds tree shaking for unused code removal
-   - Configures gzip and brotli compression
-   - Enables dynamic imports for lazy loading
-   - Optimizes images and assets (sharp, imagemin)
-   - Removes unused dependencies
-   - Sets up bundle analysis in CI/CD
-3. **Outcome**: Bundle size reduced from 2MB to 420KB (79% reduction)
+## References
+
+### Bundler Guide (`references/bundler_guide.md`)
+- Webpack configuration
+- Vite configuration
+- esbuild usage
+- Turbopack setup
+- Loaders and plugins
+- Optimization strategies
+- Bundle analysis
+- Framework comparison
+- When to use which bundler
+- Best practices
+
+### Optimization Strategies (`references/optimization_strategies.md`)
+- Code splitting (route-based, component-based)
+- Tree shaking
+- Minification (JS, CSS, HTML)
+- Bundle analysis
+- Asset optimization (images, fonts, SVG)
+- Caching strategies (file system, Babel, persistent)
+- Performance monitoring
+- Environment-specific optimization
+- Advanced strategies (DLL, Module Federation)
+- Preloading and prefetching
+
+### Framework Selection (`references/framework_selection.md`)
+- Decision matrix
+- Tool comparison (Webpack, Vite, esbuild, Turbopack, Rollup, Parcel)
+- Recommendations by use case
+- Project size considerations
+- Team size factors
+- Technical requirements
+- Performance benchmarks
+- Migration guides
+- Final recommendations
+
+## Quick Start
+
+### Setup Webpack Project
+
+```bash
+# 1. Generate Webpack configuration
+python scripts/config_webpack.py --language tsx --port 3000
+
+# 2. Setup caching
+python scripts/optimize_cache.py --loader
+
+# 3. Configure code splitting
+python scripts/code_splitting.py --type webpack
+
+# 4. Setup dev server
+python scripts/dev_server.py --bundler webpack --port 3000
+
+# 5. Optimize for production
+python scripts/optimize_production.py
+```
+
+### Setup Vite Project
+
+```bash
+# 1. Generate Vite configuration
+python scripts/config_vite.py --framework react --port 3000
+
+# 2. Configure code splitting
+python scripts/code_splitting.py --type vite
+
+# 3. Setup dev server
+python scripts/dev_server.py --bundler vite --port 3000
+
+# 4. Optimize for production
+python scripts/optimize_production.py
+```
+
+## Build Configuration
+
+### Webpack
+
+#### Basic Setup
+```javascript
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.tsx',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+  },
+  mode: 'production',
+};
+```
+
+#### Loaders
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        use: 'ts-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+};
+```
+
+#### Plugins
+```javascript
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
+  ],
+};
+```
+
+### Vite
+
+#### Basic Setup
+```typescript
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+  },
+});
+```
+
+#### Aliases
+```typescript
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+});
+```
+
+## Code Splitting
+
+### Route-based Splitting
+
+```typescript
+import { lazy, Suspense } from 'react';
+
+const Home = lazy(() => import('./pages/Home'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+
+export const App = () => (
+  <Suspense fallback={<Loading />}>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
+  </Suspense>
+);
+```
+
+### Vendor Splitting
+
+```javascript
+module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+        },
+      },
+    },
+  },
+};
+```
+
+## Caching
+
+### Webpack File System Cache
+
+```javascript
+module.exports = {
+  cache: {
+    type: 'filesystem',
+    cacheDirectory: '.webpack_cache',
+  },
+};
+```
+
+### Vite Dependency Cache
+
+```typescript
+export default defineConfig({
+  optimizeDeps: {
+    cacheDir: './node_modules/.vite',
+  },
+});
+```
+
+## Bundle Analysis
+
+### Webpack Bundle Analyzer
+
+```javascript
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+
+module.exports = {
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
+  ],
+};
+```
+
+### Vite Rollup Visualizer
+
+```typescript
+import { defineConfig } from 'vite';
+import { visualizer } from 'rollup-plugin-visualizer';
+
+export default defineConfig({
+  plugins: [
+    visualizer({
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ],
+});
+```
+
+## Performance Optimization
+
+### Minification
+
+```javascript
+const TerserPlugin = require('terser-webpack-plugin');
+
+module.exports = {
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
+      }),
+    ],
+  },
+};
+```
+
+### Asset Optimization
+
+```javascript
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: ImageMinimizerPlugin.loader,
+            options: {
+              minimizer: {
+                implementation: ImageMinimizerPlugin.imageminGenerate,
+                options: {
+                  plugins: [
+                    ['imagemin-mozjpeg', { quality: 75 }],
+                    ['imagemin-pngquant', { quality: [0.65, 0.9] }],
+                  ],
+                },
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
+## Development Workflow
+
+### Start Development Server
+
+```bash
+# Webpack
+webpack serve --config webpack.dev.config.js
+
+# Vite
+vite
+
+# With proxy
+vite --proxy http://localhost:3000
+```
+
+### Build for Production
+
+```bash
+# Webpack
+webpack --mode production
+
+# Vite
+vite build
+
+# With analysis
+ANALYZE=true npm run build
+```
+
+### Watch Mode
+
+```bash
+# Webpack
+webpack --watch
+
+# Vite
+vite --watch
+```
 
 ## Best Practices
 
-- **Measure First**: Profile builds before optimizing
-- **Cache Aggressively**: Implement multi-layer caching strategies
-- **Parallelize**: Use parallel builds and worker threads
-- **Optimize Incrementally**: Make small improvements and measure
-- **Monitor Continuously**: Track build metrics and regressions
-- **Minimize I/O**: Reduce file system operations
-- **Reduce Dependencies**: Keep dependencies minimal and updated
-- **Document Changes**: Maintain build configuration documentation
+1. **Choose the right bundler** - Consider project size and team needs
+2. **Implement code splitting** - Reduce initial bundle size
+3. **Enable caching** - Speed up rebuild times
+4. **Minify output** - Reduce bundle size
+5. **Optimize assets** - Compress images and fonts
+6. **Use source maps** - Aid debugging
+7. **Analyze bundles** - Identify large dependencies
+8. **Configure environment variables** - Manage different environments
+9. **Set up proxy** - Avoid CORS issues
+10. **Monitor performance** - Track build times and bundle sizes
 
-## Output Format
+## Common Issues
 
-The build engineer delivers:
-- **Build Configuration**: Optimized configuration files (webpack.config.js, vite.config.js)
-- **Caching Setup**: Multi-layer cache configuration (filesystem, remote, memory)
-- **Monitoring Setup**: Build metrics collection and dashboards
-- **Documentation**: Build system documentation and troubleshooting guides
-- **Scripts**: Helper scripts for build optimization and analysis
-- **CI/CD Configuration**: Pipeline configurations for optimized builds
-- **Performance Reports**: Before/after build performance comparisons
-- **Bundle Analysis**: Detailed bundle composition and optimization recommendations
+### Slow Builds
+- Enable caching
+- Use DLL plugin
+- Check for unnecessary plugins
+- Review bundle size
 
-The build engineer ensures build times are under 30 seconds, cache hit rates exceed 90%, and bundle sizes are minimized while maintaining functionality and developer experience.
+### Large Bundle Size
+- Implement code splitting
+- Remove unused dependencies
+- Use tree shaking
+- Optimize images
+- Minimize code
 
-## Core Metrics
+### HMR Not Working
+- Check dev server configuration
+- Verify HMR is enabled
+- Review firewall settings
+- Check for WebSocket issues
 
-- **Build Time**: <30 seconds (cold), <5 seconds (hot reload)
-- **Cache Hit Rate**: >90%
-- **Bundle Size**: Minimized by 40-60% through optimization
-- **Developer Satisfaction**: 4.5-5/5 through fast builds
-- **Flaky Builds**: 0% through reliable caching and configuration
+### Build Failures
+- Review error messages
+- Check configuration syntax
+- Verify dependencies
+- Clean cache
+
+## Troubleshooting
+
+### Webpack
+
+**Common Issues:**
+- Module resolution failures
+- Circular dependencies
+- Memory issues
+- Slow builds
+
+**Solutions:**
+- Check resolve configuration
+- Use circular-dependency-plugin
+- Increase memory limit
+- Enable caching
+
+### Vite
+
+**Common Issues:**
+- HMR not working
+- Alias not resolving
+- Plugin conflicts
+
+**Solutions:**
+- Check server configuration
+- Verify alias configuration
+- Review plugin compatibility
+
+## Resources
+
+- [Webpack Documentation](https://webpack.js.org/)
+- [Vite Documentation](https://vitejs.dev/)
+- [esbuild Documentation](https://esbuild.github.io/)
+- [Rollup Documentation](https://rollupjs.org/)
+- [Parcel Documentation](https://parceljs.org/)
+- [Turbopack Documentation](https://turbo.build/pack)
+
+## Included Automation Scripts
+
+The build engineer skill includes comprehensive automation scripts located in `scripts/`:
+
+- **config_webpack.py**: Webpack configuration generation with loaders, plugins, optimization, and dev server setup
+- **config_vite.py**: Vite configuration generation for React, Vue, and vanilla JavaScript with plugins and aliases
+- **optimize_cache.py**: Cache optimization setup with file system cache, Babel cache, and persistent cache configuration
+- **code_splitting.py**: Code splitting configuration for route-based, component-based, vendor splitting, and library chunking
+- **dev_server.py**: Development server setup for Webpack and Vite with HMR, proxy configuration, and port customization
+- **optimize_production.py**: Production optimization configuration with minification, asset optimization, and bundle analysis
+
+## References
+
+### Reference Documentation (`references/` directory)
+- **troubleshooting.md**: Troubleshooting guide for build system issues including slow builds, bundle size problems, HMR failures, and deployment issues
+- **best_practices.md**: Best practices for build configuration, optimization strategies, code splitting, and caching

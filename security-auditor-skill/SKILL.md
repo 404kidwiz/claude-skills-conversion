@@ -169,6 +169,103 @@ trigger_keywords:
 - **Kali Linux**: Penetration testing distribution, security tools collection
 - **Custom Scripts**: Python, PowerShell, Bash for security automation
 
+## Skill-Specific Scripts and References
+
+### Available Security Auditor Scripts
+Located in `scripts/` directory:
+
+- **scan_vulnerabilities.py** - Security vulnerability scanning (Bandit, Safety)
+- **detect_secrets.py** - Secret detection (API keys, passwords, tokens)
+- **audit_dependencies.py** - Dependency vulnerability checking (pip-audit, npm audit)
+- **scan_containers.py** - Container security scanning (Docker, Kubernetes)
+- **audit_infrastructure.py** - Infrastructure security audit (Terraform, CloudFormation)
+- **review_config.py** - Configuration review (hardcoded credentials, weak passwords)
+- **sast_scan.py** - Static Application Security Testing automation
+- **dast_scan.py** - Dynamic Application Security Testing automation
+
+### Available Security Auditor References
+Located in `references/` directory:
+
+- **owasp_top10.md** - OWASP Top 10 security risks with patterns and remediation
+- **security_frameworks.md** - Comprehensive security frameworks (OWASP, NIST, CIS, ISO, PCI DSS, HIPAA, GDPR, SOC 2)
+- **remediation_guide.md** - Security vulnerability remediation procedures
+- **report_templates.md** - Security report templates (executive summary, technical, compliance)
+
+### Script Usage Examples
+
+```bash
+# Vulnerability scanning
+python3 scripts/scan_vulnerabilities.py . --format json --output vulnerability_report.json
+
+# Secret detection
+python3 scripts/detect_secrets.py . --config config/security.yaml --output secrets.json
+
+# Dependency audit
+python3 scripts/audit_dependencies.py . --format text
+
+# Container security scan
+python3 scripts/scan_containers.py --dockerfile Dockerfile
+
+# Infrastructure audit
+python3 scripts/audit_infrastructure.py terraform/
+
+# Configuration review
+python3 scripts/review_config.py src/
+
+# SAST scan
+python3 scripts/sast_scan.py . --language python --format json
+
+# DAST scan
+python3 scripts/dast_scan.py https://example.com --format text --output dast_report.txt
+```
+
+### Configuration Files
+
+Create `config/security.yaml` for script configuration:
+
+```yaml
+security:
+  scan_paths: ['.']
+  severity_threshold: 'medium'
+  exclude_patterns: ['venv', '__pycache__', '.git', 'node_modules']
+  
+  scan_vulnerabilities:
+    language: 'auto'
+    
+  detect_secrets:
+    file_extensions: ['.py', '.js', '.ts', '.java', '.go', '.rb', '.php', '.sh', '.yml', '.yaml', '.json', '.env']
+    max_file_size_mb: 10
+    
+  audit_dependencies:
+    check_python: true
+    check_nodejs: true
+    check_ruby: true
+    
+  scan_containers:
+    dockerfile_paths: ['.']
+    image_names: []
+    severity_threshold: 'medium'
+    
+  review_config:
+    check_for_secrets: true
+    check_for_weak_passwords: true
+    check_for_insecure_defaults: true
+    
+  sast_scan:
+    check_for_secrets: true
+    check_for_weak_passwords: true
+    check_for_insecure_defaults: true
+    
+  dast_scan:
+    target_url: ''
+    auth_url: ''
+    auth_username: ''
+    auth_password: ''
+    scan_depth: 5
+    include_spider: true
+    active_scan_enabled: true
+```
+
 ## When to Use This Agent
 
 ### Security Assessment Projects

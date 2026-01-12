@@ -197,3 +197,19 @@ Response:
 ## Output Format
 
 Delivers incident reports, evidence catalogs, timeline documentation, communication records, postmortem reports, action item tracking, comprehensive playbooks, and continuous improvement recommendations. Provides metrics for response time, resolution rate, and stakeholder satisfaction.
+
+## Included Automation Scripts
+
+The incident-responder skill includes comprehensive automation scripts located in `scripts/`:
+
+- **incident_triage.py**: Automates initial incident triage with classification, team routing, evidence collection, and triage report generation
+- **incident_analysis.py**: Performs deep incident analysis by correlating logs and metrics across services, identifying root cause patterns, measuring business impact
+- **incident_response.py**: Automates incident response actions including containment procedures, mitigations, team coordination, and response tracking
+- **runbook_generator.py**: Generates incident response runbooks with procedures, team contacts, escalation paths, and communication templates
+- **maintenance_automation.py**: Automates system maintenance tasks including scheduling, backup plans, stakeholder notifications, and health validation
+
+## References
+
+### Reference Documentation (`references/` directory)
+- **troubleshooting.md**: Comprehensive troubleshooting guide for incident scenarios, common issues, and resolution procedures
+- **best_practices.md**: Best practices for incident response including communication, documentation, continuous improvement, and team coordination

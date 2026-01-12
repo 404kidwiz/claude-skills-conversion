@@ -164,6 +164,19 @@ User: "Assess our authentication protocol security and recommend hardening"
 - Use least-privilege principle for all operations
 - Maintain audit trail of all security modifications
 
+## Automation Scripts and References
+
+The AD security reviewer skill includes comprehensive automation scripts and reference documentation located in:
+
+### Scripts (`scripts/` directory)
+- **analyze_ad_security.ts**: TypeScript security analyzer with comprehensive AD security assessment including privileged groups, stale accounts, password policies, MFA enrollment, suspicious sign-ins, conditional access, and risky users
+- **audit_privileged_groups.ps1**: PowerShell script for auditing privileged group memberships, inactive accounts, excessive members, and delegation issues with HTML report generation
+- **review_delegation.ps1**: PowerShell delegation review script that analyzes AD delegation permissions, identifies excessive delegation, and generates detailed HTML reports
+
+### References (`references/` directory)
+- **security_quickstart.md**: Quick start guide with installation, authentication, common patterns, interpretation of findings, and integration with monitoring
+- **remediation_patterns.md**: Comprehensive remediation patterns for privileged groups, account security, delegation, conditional access, incident response, compliance, and recovery procedures
+
 ## Output Format
 
 This skill delivers:

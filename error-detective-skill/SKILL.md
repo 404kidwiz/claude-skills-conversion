@@ -201,3 +201,15 @@ Response:
 ## Output Format
 
 Delivers comprehensive error analysis reports, pattern libraries, root cause databases, monitoring improvements, predictive alerts, and knowledge management resources. Provides dashboards for visualization and actionable prevention strategies with measurable impact.
+
+## Included Automation Scripts
+
+The error-detective skill includes comprehensive automation scripts located in `scripts/`:
+
+- **error_detection_automation.py**: Automates error detection and analysis by scanning logs for error patterns, correlating errors across services, detecting anomalies in error rates, and generating error reports and alerts
+
+## References
+
+### Reference Documentation (`references/` directory)
+- **troubleshooting.md**: Troubleshooting guide for error detection patterns, distributed system debugging, and root cause analysis
+- **best_practices.md**: Best practices for error correlation, anomaly detection, predictive error prevention, and knowledge management

@@ -1,464 +1,328 @@
-# 133 Agent Skills - Comprehensive Development Assistant
-
-**Production-ready ecosystem** for Claude Code | 100% quality compliance | 12 major domains
-
----
-
-## 🎯 What This Is
-
-A collection of 133 specialized Agent Skills that transforms Claude Code into an intelligent, domain-aware development assistant. Each skill encapsulates deep expertise from real-world production environments, enabling on-demand guidance for complex technical challenges across the entire software development lifecycle.
-
-**Think of this as:**
-- **133 senior engineers** available on-demand, each specializing in their domain
-- **Best practice knowledge base** that auto-triggers when you need it
-- **Workflow automation** for complex, multi-step technical processes
-- **Quality gatekeeper** ensuring production-grade approaches
-
----
-
-## 📊 Overview
-
-| Metric | Value |
-|---------|-------|
-| **Total Skills** | 177 |
-| **Quality Compliance** | 100% Anthropic standards |
-| **Average Lines** | < 500 (concise, focused) |
-| **Coverage** | 14 major development domains |
-| **Auto-Discovery** | Yes (task-triggered) |
-
----
-
-## 🏗️ Skills by Domain
-
-### Core Architecture (10 skills)
-**Orchestration and strategic guidance**
-
-- **explore** - Contextual codebase analysis and pattern discovery
-- **oracle** - Senior engineering advisor for architecture decisions
-- **librarian** - External reference research (docs, OSS examples, best practices)
-- **frontend-ui-ux-engineer** - Designer-turned-developer for stunning UI/UX
-- **document-writer** - Technical documentation specialist
-- **multimodal-looker** - PDF, image, and diagram analysis
-- **general** - General-purpose agent for multi-step tasks
-- **build** - Build system specialist
-- **build-engineer** - Build system optimization and compilation speed expert
-- **plan** - Strategic planning agent
-
-### Code Quality & Utilities (6 skills)
-**Review, debugging, and refactoring**
-
-- **code-reviewer** - Adversarial senior developer review (finds issues)
-- **debugger** - Debugging expert for production issues
-- **refactoring-specialist** - Safe, systematic code improvements
-- **dependency-manager** - Package management and upgrades
-- **error-detective** - Error analysis and resolution expert
-- **architect-reviewer** - Architecture review specialist
-
-### Language Specialists (26 skills)
-**Framework and ecosystem expertise**
-
-**Web & Mobile:**
-- JavaScript Pro, TypeScript Pro, React Specialist
-- Vue Expert, Next.js Developer, Angular Architect
-- Flutter Expert, Kotlin Specialist, Swift Expert
-- Electron Pro - Desktop application expert
-- UI Designer - Visual design and interaction specialist
-- Frontend Developer - React, Vue, Angular specialist
-- Mobile Developer - Cross-platform mobile specialist
-- Mobile App Developer - Mobile application specialist
-
-**Backend & Systems:**
-- Python Pro, Go Pro, Java Architect
-- C# Developer, Rust Engineer, C++ Pro
-- PHP Pro
-- Elixir Expert - Elixir and OTP fault-tolerant systems
-
-**Full-Stack:**
-- .NET Framework 4.8 Expert, .NET Core Expert
-- Backend Developer - Server-side API specialist
-- Fullstack Developer - End-to-end feature development
-
-**Frameworks:**
-- Spring Boot Engineer, Rails Expert
-- Laravel Specialist, Django Developer
-
-**Languages:**
-- SQL Pro - Database query expert
-- PowerShell 5.1 Expert - Legacy Windows automation
-- PowerShell 7 Expert - Cross-platform PowerShell automation
-
-**Real-time & Communication:**
-- WebSocket Engineer - Real-time communication specialist
-
-### Infrastructure (14 skills)
-**Cloud, DevOps, and platform engineering**
-
-- **cloud-architect** - Cloud architecture patterns (AWS, GCP, Azure)
-- **azure-infra-engineer** - Azure cloud infrastructure and automation expert
-- **kubernetes-specialist** - K8s deployments, services, operators
-- **deployment-engineer** - CI/CD pipelines, GitOps, releases
-- **database-administrator** - DB design, optimization, migrations
-- **sre-engineer** - Reliability, monitoring, incident response
-- **devops-engineer** - Infrastructure automation, IaC, tooling
-- **security-auditor** - DevSecOps, compliance, penetration testing
-- **performance-engineer** - Performance monitoring, optimization
-- **performance-testing** - Load testing, benchmarking
-- **terraform-engineer** - Infrastructure as Code patterns
-- **security-engineer** - Infrastructure security specialist
-- **platform-engineer** - Platform architecture expert
-- **network-engineer** - Network infrastructure specialist
-
-### Quality & Security (14 skills)
-**Testing, accessibility, and security**
-
-- **accessibility-tester** - WCAG compliance, screen reader testing
-- **penetration-tester** - Security vulnerability assessment
-- **compliance-auditor** - GDPR, HIPAA, SOC2, PCI-DSS
-- **qa-expert** - Quality assurance best practices
-- **test-automator** - Test automation frameworks (Playwright, Cypress)
-- **error-detector** - Proactive error pattern detection
-- **api-designer** - REST/GraphQL API design
-- **microservices-architect** - Distributed system patterns
-- **graphql-architect** - GraphQL schema and optimization
-- **fullstack-developer** - End-to-end application development
-- **seo-specialist** - Search engine optimization
-- **chaos-engineer** - System resilience testing expert
-- **powershell-security-hardening** - Windows PowerShell security hardening
-- **ad-security-reviewer** - Active Directory security specialist
-
-### Data & AI (15 skills)
-**Data engineering, ML, and AI systems**
-
-- **data-engineer** - ETL pipelines, data lakes, warehousing
-- **machine-learning-engineer** - ML model development, training
-- **mlops-engineer** - ML pipeline automation, deployment
-- **llm-architect** - Large language model architecture
-- **data-scientist** - Statistical analysis, modeling
-- **database-optimizer** - Query optimization, indexing
-- **nlp-engineer** - Natural language processing
-- **ai-engineer** - AI system integration
-- **ml-engineer** - Production ML systems
-- **prompt-engineer** - LLM prompt optimization
-- **data-analyst** - Data insights and visualization specialist
-- **postgres-pro** - PostgreSQL database expert
-- **devops-incident-responder** - DevOps incident management
-- **incident-responder** - System incident response expert
-- **error-detective** - Error analysis and resolution expert
-
-### Business & Product (12 skills)
-**Product management and technical analysis**
-
-- **product-manager** - Product strategy and requirements
-- **business-analyst** - Stakeholder analysis, requirements gathering
-- **project-manager** - Project planning, execution
-- **technical-writer** - API docs, user guides
-- **ux-researcher** - User research, usability testing
-- **scrum-master** - Agile facilitation, sprint planning
-- **customer-success-manager** - Onboarding, training
-- **sales-engineer** - Technical sales support
-- **content-marketer** - Content marketing specialist
-- **legal-advisor** - Legal and compliance specialist
-- **wordpress-master** - WordPress development and optimization expert
-
-### Specialized Domains (14 skills)
-**Industry-specific expertise**
-
-- **api-documenter** - OpenAPI/Swagger documentation
-- **blockchain-developer** - Smart contracts, Web3
-- **embedded-systems** - IoT, firmware, microcontrollers
-- **fintech-engineer** - Payments, trading systems
-- **game-developer** - Game engines, graphics
-- **iot-engineer** - Connected devices, edge computing
-- **payment-integration** - Stripe, PayPal, Braintree
-- **quant-analyst** - Algorithmic trading, risk models
-- **risk-manager** - Risk assessment, mitigation
-- **seo-specialist** - Search engine optimization
-- **m365-admin** - Microsoft 365 and Exchange Online administration
-- **windows-infra-admin** - Windows infrastructure and Active Directory automation
-
-### Developer Experience (12 skills)
-**Tooling and workflow optimization**
-
-- **git-workflow-manager** - Git branching, PR workflows
-- **tooling-engineer** - CLI tools, plugins, extensions
-- **cli-developer** - Command-line interface development
-- **legacy-modernizer** - Legacy code migration
-- **dx-optimizer** - Developer experience improvement
-- **documentation-engineer** - Technical documentation systems
-- **mcp-developer** - Model Context Protocol integration
-- **powershell-module-architect** - PowerShell module and profile architecture
-- **powershell-ui-architect** - PowerShell UI/UX specialist
-- **it-ops-orchestrator** - IT operations orchestration
-- **slack-expert** - Slack platform and @slack/bolt specialist
-
-### Meta & Orchestration (8 skills)
-**Multi-agent coordination and workflow**
-
-- **agent-organizer** - Agent selection and routing
-- **workflow-orchestrator** - Complex workflow coordination
-- **task-distributor** - Parallel task execution
-- **knowledge-synthesizer** - Cross-agent knowledge integration
-- **performance-monitor** - Agent performance tracking
-- **error-coordinator** - Cross-agent error handling
-- **context-manager** - Context optimization and pruning
-- **multi-agent-coordinator** - Multi-agent system design
-
-### Research & Analysis (6 skills)
-**Deep research and market intelligence**
-
-- **research-analyst** - Technical and market research
-- **search-specialist** - Advanced search strategies
-- **trend-analyst** - Technology trend analysis
-- **competitive-analyst** - Competitive intelligence
-- **market-researcher** - Market sizing, opportunity analysis
-- **data-researcher** - Data-driven research methods
-
-### BMAD Methodology (14 skills)
-**Business-Model-Assisted-Development agents**
-
-**BMM (Business Model Mapping):**
-- **analyst** - Business analysis and requirement gathering
-- **architect** - System architecture design
-- **dev** - Development implementation
-- **pm** - Product management
-- **quick-flow-solo-dev** - Rapid development workflow
-- **sm** - Scrum master facilitation
-- **tech-writer** - Technical documentation
-- **ux-designer** - UX design and user research
-
-**CIS (Creative Innovation Strategy):**
-- **brainstorming-coach** - Ideation facilitation
-- **creative-problem-solver** - Creative problem-solving
-- **design-thinking-coach** - Human-centered design
-- **innovation-strategist** - Innovation and strategy
-- **presentation-master** - Presentation design
-- **storyteller** - Narrative development
-
----
-
-## 🚀 How It Works
-
-### Auto-Discovery
-Skills trigger automatically based on your task context:
-
-```
-You: "Help me set up a Kubernetes deployment for my microservices"
-      ↓
-[kubernetes-specialist-skill activates]
-      ↓
-Claude uses K8s expertise to guide you through:
-- Deployment manifests (Deployment, Service, ConfigMap)
-- Ingress and service discovery
-- Rolling updates and rollbacks
-- Monitoring and logging setup
-```
-
-### Progressive Disclosure
-Skills load additional references on-demand:
-
-```
-Initial skill: < 500 lines (concise)
-      ↓
-When triggered, skill loads:
-- Best practice guides
-- Real-world examples
-- Troubleshooting patterns
-      ↓
-Context remains focused until needed
-```
-
-### Tool Restrictions
-Each skill specifies appropriate tool access:
-
-```
-security-auditor-skill:
-- ✅ Can read: Security configs, test results
-- ✅ Can write: Security fixes, reports
-- ❌ Cannot: Modify production DB, deploy to prod
-```
-
----
-
-## 📖 Real-World Use Cases
-
-### 1. Cloud Migration
-**Challenge:** Migrate monolithic app to Kubernetes
-
-```
-1. cloud-architect: Design multi-region architecture
-2. kubernetes-specialist: Create deployment manifests
-3. sre-engineer: Set up monitoring and alerts
-4. deployment-engineer: Configure CI/CD pipeline
-5. security-auditor: Review security posture
-```
-
-**Result:** Production-ready migration in days, not weeks
-
-### 2. API Development
-**Challenge:** Build REST API for fintech product
-
-```
-1. api-designer: Design API specification (OpenAPI)
-2. payment-integration: Integrate Stripe/Braintree
-3. security-auditor: Implement OAuth2, PCI-DSS compliance
-4. test-automator: Create automated test suite
-5. documentation-engineer: Generate API documentation
-```
-
-**Result:** Compliant, documented API with automated testing
-
-### 3. Performance Optimization
-**Challenge:** Slow application performance
-
-```
-1. performance-engineer: Profile and identify bottlenecks
-2. database-optimizer: Optimize queries and indexes
-3. cache-engineer: Implement caching strategy
-4. performance-testing: Benchmark improvements
-5. sre-engineer: Set up performance monitoring
-```
-
-**Result:** 3x performance improvement with monitoring
-
-### 4. Legacy Modernization
-**Challenge:** Modernize 10-year-old Java application
-
-```
-1. legacy-modernizer: Analyze legacy codebase
-2. java-architect: Design modern architecture
-3. spring-boot-engineer: Migrate to Spring Boot
-4. test-automator: Create comprehensive test suite
-5. deployment-engineer: Set up modern CI/CD
-```
-
-**Result:** Modern, testable application with automated deployment
-
-### 5. Machine Learning Pipeline
-**Challenge:** Build ML model for predictions
-
-```
-1. data-engineer: Build ETL pipeline
-2. data-scientist: Feature engineering, modeling
-3. ml-engineer: Model training, validation
-4. mlops-engineer: Deploy to production
-5. performance-engineer: Optimize inference latency
-```
-
-**Result:** End-to-end ML pipeline with monitoring
-
----
-
-## 📚 Documentation
-
-- **SKILLS-INDEX.md** - Complete catalog of all 133 skills
-- **CONVERSION-GUIDE.md** - How skills were created (for contributors)
-- **SKILL-VALIDATION-GUIDE.md** - Quality standards and validation
-- **EXTENDED-SUBAGENT-CATALOG.md** - Source agents documentation
-
----
-
-## 🛠️ Installation
+# Development Tooling and Automation Framework
+
+Comprehensive collection of scripts, references, and documentation for modern software development workflows.
+
+## Skills Overview
+
+This framework includes three main development skills:
+
+### 1. Backend Developer (`backend-developer-skill/`)
+Tools and references for building production-ready server-side applications.
+
+**Features:**
+- Multi-framework API scaffolding (Express, FastAPI, Django, Spring Boot)
+- Database model generation (Sequelize, TypeORM, SQLAlchemy, Django ORM, JPA)
+- Authentication/authorization templates (JWT, OAuth2, Session)
+- Input validation middleware
+- Error handling patterns
+- Logging and monitoring setup
+- API documentation generation (OpenAPI/Swagger)
+- Unit test templates
+- Deployment scripts (Docker, Kubernetes, AWS, GCP)
+
+**Scripts:**
+- `scripts/scaffold_api.py` - API scaffolding
+- `scripts/generate_model.py` - Database model generation
+- `scripts/setup_auth.py` - Authentication setup
+- `scripts/create_middleware.py` - Middleware generation
+- `scripts/error_handler.py` - Error handling
+- `scripts/setup_logging.py` - Logging configuration
+- `scripts/generate_docs.py` - API documentation
+- `scripts/create_tests.py` - Test templates
+- `scripts/deploy.sh` - Deployment automation
+
+**References:**
+- `references/api_patterns.md` - REST API patterns and best practices
+- `references/backend_frameworks.md` - Framework guides (Express, FastAPI, Django, Spring Boot)
+- `references/testing_strategies.md` - Testing strategies and patterns
+- `references/deployment_guide.md` - Deployment strategies and configurations
+
+### 2. Frontend Developer (`frontend-developer-skill/`)
+Tools and references for building modern, performant web applications.
+
+**Features:**
+- React component scaffolding with hooks
+- State management setup (Redux, Zustand, Context API, Jotai, Recoil)
+- API client generation (Axios, Fetch)
+- CSS-in-JS utility patterns
+- TypeScript configuration
+- Linting and formatting setup (ESLint, Prettier)
+- Testing setup (Vitest, Jest, Playwright)
+- Build optimization (Vite, Webpack)
+- Deployment scripts (Vercel, Netlify, AWS, GitHub Pages)
+
+**Scripts:**
+- `scripts/scaffold_component.tsx` - React component scaffolding
+- `scripts/setup_state.ts` - State management setup
+- `scripts/create_api_client.ts` - API client generation
+- `scripts/create_utils.ts` - Utility functions generation
+- `scripts/setup_linting.ts` - Linting and formatting setup
+- `scripts/setup_testing.ts` - Testing configuration
+- `scripts/optimize_build.ts` - Build optimization
+- `scripts/deploy.sh` - Frontend deployment
+
+**References:**
+- `references/react_patterns.md` - React component patterns and hooks
+- `references/state_management.md` - State management comparison and usage
+- `references/performance_guide.md` - Performance optimization strategies
+- `references/frontend_tooling.md` - Frontend development tools and workflows
+
+### 3. Build Engineer (`build-engineer-skill/`)
+Tools and references for configuring, optimizing, and managing build systems.
+
+**Features:**
+- Webpack configuration generator
+- Vite configuration generator
+- esbuild configuration
+- Turbopack setup
+- Build cache optimization
+- Code splitting strategies
+- Bundle size analysis
+- Incremental build setup
+- TypeScript compilation optimization
+- Babel configuration
+- PostCSS/Tailwind integration
+- Development server setup
+- Production build optimization
+
+**Scripts:**
+- `scripts/config_webpack.py` - Webpack configuration
+- `scripts/config_vite.py` - Vite configuration
+- `scripts/config_esbuild.py` - esbuild configuration
+- `scripts/optimize_cache.py` - Cache optimization
+- `scripts/code_splitting.py` - Code splitting strategies
+- `scripts/analyze_bundle_size.py` - Bundle analysis
+- `scripts/setup_incremental.py` - Incremental builds
+- `scripts/optimize_typescript.py` - TypeScript optimization
+- `scripts/config_babel.py` - Babel configuration
+- `scripts/integrate_postcss.py` - PostCSS integration
+- `scripts/setup_tailwind.py` - Tailwind CSS setup
+- `scripts/dev_server.py` - Development server
+- `scripts/optimize_production.py` - Production optimization
+
+**References:**
+- `references/bundler_guide.md` - Bundler comparison and configuration
+- `references/optimization_strategies.md` - Build optimization techniques
+- `references/framework_selection.md` - Framework selection guide
+- `references/plugin_development.md` - Plugin development guide
+
+## Quick Start
+
+### Backend Developer
 
 ```bash
-# Clone the repository
-git clone https://github.com/404kidwiz/claude-supercode-skills.git ~/claude-supercode-skills
+# Scaffold a new Express API
+cd backend-developer-skill
+python scripts/scaffold_api.py express my-api
 
-# Install all 133 skills
-cp -r ~/claude-supercode-skills/* ~/.claude/skills/
+# Setup authentication
+python scripts/setup_auth.py express jwt
 
-# Restart Claude Code to load skills
-claude
+# Generate database models
+python scripts/generate_model.py typeorm --schema schema.json --output src/models
 
-# Verify installation
-claude
-# Ask: "What skills are available?"
-# Should display 133 skills organized by category
+# Create tests
+python scripts/create_tests.py express --output tests
+
+# Deploy
+cd my-api
+./scripts/deploy.sh --platform kubernetes
 ```
 
----
+### Frontend Developer
 
-## 🎯 Key Features
+```bash
+# Create a React component
+cd frontend-developer-skill
+ts-node scripts/scaffold_component.tsx UserProfile --hooks=useState,useEffect
 
-### Production-Ready Quality
-- ✅ **100% Third-Person Descriptions** - Auto-discovery ready ("Use when user needs...")
-- ✅ **< 500 Lines Each** - Concise, focused skills
-- ✅ **Proper YAML Frontmatter** - Name, description, required fields
-- ✅ **Progressive Disclosure** - Load references on-demand
-- ✅ **Tool Restrictions** - Appropriate access controls
+# Setup state management
+ts-node scripts/setup_state.ts User redux
 
-### Domain-Specific Expertise
-Each skill includes:
-- **When to Use** - Clear triggers and use cases
-- **What It Does** - Specific capabilities and patterns
-- **Tool Access** - What tools the skill can use
-- **Example Interactions** - Real-world scenarios
-- **Best Practices** - Industry-standard approaches
+# Generate API client
+ts-node scripts/create_api_client.ts axios
 
-### Auto-Discovery System
-Skills trigger automatically when:
-- Task matches skill domain keywords
-- Context requires specialized expertise
-- User requests domain-specific guidance
-- Complex multi-step processes needed
+# Setup testing
+ts-node scripts/setup_testing.ts vitest
 
----
+# Deploy
+./scripts/deploy.sh --platform vercel
+```
 
-## 📈 Compared to Other Repositories
+### Build Engineer
 
-| Repository | Stars | Skills | Focus | This Repo |
-|------------|--------|---------|-----------|-----------|
-| anthropics/skills (official) | 37,888 | 16 | Reference templates | **177 comprehensive skills** |
-| muratcankoylan/Agent-Skills | 6,432 | 18 | Context engineering | **12 major domains covered** |
-| ComposioHQ/awesome-claude-skills | 17,844 | 30 | Curated list | **Production-ready, not just a list** |
-| alirezarezvani/claude-skills | 552 | 42 | Real-world usage | **Largest single collection** |
+```bash
+# Configure Vite
+cd build-engineer-skill
+python scripts/config_vite.py --framework react --port 3000
 
-**Uniqueness:** This repository represents one of the **largest single collections** of production-ready Agent Skills available, with comprehensive coverage across the entire software development lifecycle.
+# Setup caching
+python scripts/optimize_cache.py
 
----
+# Configure code splitting
+python scripts/code_splitting.py --type vite
 
-## 💡 Why This Matters
+# Optimize for production
+python scripts/optimize_production.py
+```
 
-### For Individual Developers
-- **On-demand expertise** - Access 133 specialists when you need them
-- **Best practices by default** - Skills enforce production-grade approaches
-- **Learn faster** - Each skill teaches industry standards
-- **Avoid common mistakes** - Skills include known pitfalls and solutions
+## Architecture
 
-### For Teams
-- **Consistency** - Everyone uses the same best practices
-- **Knowledge sharing** - Domain expertise encoded in reusable skills
-- **Onboarding** - New developers learn from skills
-- **Quality gates** - Skills enforce standards
+### Script Features
 
-### For Organizations
-- **Reduced training time** - Skills provide expert guidance
-- **Standardized workflows** - Repetitive processes automated
-- **Knowledge preservation** - Expertise captured in skills
-- **Scalable expertise** - One expert can teach many via skills
+All scripts include:
+- **Error handling and logging** - Comprehensive error handling with informative messages
+- **Configuration file support** - JSON/YAML configuration files
+- **Input validation** - Validate all inputs before processing
+- **Modular design** - Reusable functions and utilities
+- **Type safety** - TypeScript where applicable
+- **Clear documentation** - Inline comments and help text
+- **Security best practices** - No hardcoded secrets, secure defaults
 
----
+### Reference Documentation
 
-## 🎉 What You Get
+All references include:
+- **Quick start guide** - Get started quickly with examples
+- **Code patterns** - Reusable patterns and best practices
+- **API design guidelines** - RESTful API design principles
+- **Framework-specific guides** - Detailed framework documentation
+- **Testing strategies** - Comprehensive testing approaches
+- **Troubleshooting section** - Common issues and solutions
 
-**A complete development assistant ecosystem:**
-- 177 domain-expert skills covering 14 major areas
-- Auto-discovery that triggers right skill at right time
-- Production-ready best practices built into every skill
-- Progressive disclosure keeps context efficient
-- Real-world examples and interactions for each skill
-- Tool restrictions for safety and security
-- 44 new skills from VoltAgent repository integration
+## Integration
 
-**Ready for immediate use!** 🚀
+### Combined Workflow
 
----
+```bash
+# 1. Create backend
+cd backend-developer-skill
+python scripts/scaffold_api.py express my-api
+cd my-api
+python scripts/setup_auth.py express jwt
 
-## 📝 Repository
+# 2. Create frontend
+cd ../frontend-developer-skill
+ts-node scripts/setup_state.ts User redux
+ts-node scripts/create_api_client.ts axios
+cd my-frontend
 
-**https://github.com/404kidwiz/claude-supercode-skills**
+# 3. Configure build
+cd ../build-engineer-skill
+python scripts/config_vite.py --framework react
+python scripts/optimize_cache.py
+```
 
-**License:** MIT - Free to use, modify, and distribute
+### CI/CD Integration
 
----
+```yaml
+# .github/workflows/ci.yml
+name: CI
 
-**Transform Claude Code from a code editor into your 133-person development team.**
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Backend Tests
+        run: |
+          cd backend-developer-skill
+          python scripts/create_tests.py express
+          npm test
+      - name: Frontend Tests
+        run: |
+          cd frontend-developer-skill
+          ts-node scripts/setup_testing.ts vitest
+          npm test
+      - name: Build
+        run: |
+          cd build-engineer-skill
+          python scripts/optimize_production.py
+          npm run build
+```
+
+## Best Practices
+
+### Development
+
+1. **Use version control** - All code should be in Git
+2. **Write tests** - Use generated test templates
+3. **Document code** - Follow documentation patterns
+4. **Use type safety** - Leverage TypeScript
+5. **Follow patterns** - Use provided code patterns
+
+### Build Process
+
+1. **Optimize builds** - Use provided optimization scripts
+2. **Implement caching** - Speed up build times
+3. **Code splitting** - Reduce initial bundle size
+4. **Minify output** - Reduce bundle size
+5. **Analyze bundles** - Identify optimization opportunities
+
+### Deployment
+
+1. **Test thoroughly** - Run all tests before deployment
+2. **Use environment variables** - Never hardcode secrets
+3. **Implement health checks** - Monitor application health
+4. **Use CI/CD** - Automate deployment pipeline
+5. **Monitor production** - Set up monitoring and alerts
+
+## Troubleshooting
+
+### Common Issues
+
+**Script permissions:**
+```bash
+chmod +x scripts/*.py
+chmod +x scripts/*.sh
+```
+
+**Dependencies not found:**
+```bash
+# Python
+pip install -r requirements.txt
+
+# Node.js
+npm install
+```
+
+**Build failures:**
+```bash
+# Clear cache
+rm -rf node_modules .cache
+
+# Reinstall dependencies
+npm install
+
+# Rebuild
+npm run build
+```
+
+## Contributing
+
+To add new features:
+
+1. Create new script in `scripts/` directory
+2. Follow existing script structure
+3. Include error handling and logging
+4. Add documentation in `references/` directory
+5. Update relevant SKILL.md
+
+## License
+
+MIT License - Feel free to use and modify for your projects.
+
+## Support
+
+For issues or questions:
+1. Check SKILL.md for detailed instructions
+2. Review references for best practices
+3. Check script help text with `-h` or `--help`
+4. Review example usage in documentation
+
+## Resources
+
+- [Backend Developer SKILL.md](backend-developer-skill/SKILL.md)
+- [Frontend Developer SKILL.md](frontend-developer-skill/SKILL.md)
+- [Build Engineer SKILL.md](build-engineer-skill/SKILL.md)

@@ -295,6 +295,19 @@ if ($PSCmdlet.ShouldProcess("example.com zone", "Update DNS records")) {
 - Monitor and audit administrative actions
 - Follow security baselines and best practices
 
+## Automation Scripts and References
+
+The Windows infrastructure admin skill includes comprehensive automation scripts and reference documentation located in:
+
+### Scripts (`scripts/` directory)
+- **manage_ad_users.ps1**: Advanced Active Directory user management with validation, error handling, logging, and bulk operations support
+- **configure_dns.ps1**: Complete DNS management script for zone creation, record management, DNS health checks, and troubleshooting
+- **setup_gpo.ps1**: Group Policy management with GPO creation, linking, backup/restore, and security settings application
+
+### References (`references/` directory)
+- **ad_quickstart.md**: Quick start guide with installation, authentication, common patterns, and troubleshooting
+- **windows_patterns.md**: Comprehensive patterns for AD management, DNS configuration, GPO administration, security patterns, and backup/recovery
+
 ## Output Format
 
 **Standard Deliverable Structure:**

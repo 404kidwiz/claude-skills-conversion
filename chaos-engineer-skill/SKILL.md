@@ -194,6 +194,18 @@ The chaos engineer delivers:
 
 The chaos engineer ensures all experiments have clear hypotheses, controlled blast radius (<10% in production), automated rollback (<30s), and comprehensive monitoring to learn from failures without customer impact.
 
+## Included Automation Scripts
+
+The chaos engineer skill includes comprehensive automation scripts located in `scripts/`:
+
+- **chaos_experiment.py**: Automates chaos engineering experiments with hypothesis design, failure injection, blast radius control, metrics collection, and automated rollback
+- **resilience_assessment.py**: Evaluates system resilience by assessing resilience patterns, identifying single points of failure, testing failover capabilities, and analyzing capacity
+
+## References
+
+### Reference Documentation (`references/` directory)
+- **troubleshooting.md**: Troubleshooting guide for chaos engineering tools, experiment failures, and rollback procedures
+- **best_practices.md**: Best practices for controlled failure injection, blast radius management, hypothesis validation, and continuous resilience improvement
 ## Core Metrics
 
 - **Experiments Executed**: 40-60 per quarter (production, staging, development)

@@ -133,6 +133,109 @@ grep -r "secret" src/ --include="*.js" --include="*.py" --include="*.yml"
 - Software Composition Analysis (SCA)
 - Continuous security monitoring solutions
 
+## Skill-Specific Scripts and References
+
+### Available Penetration Tester Scripts
+Located in `scripts/` directory:
+
+- **recon_scan.py** - Automated reconnaissance (DNS, subdomain enumeration, port scanning)
+- **vuln_scan.py** - Vulnerability scanning (Nessus, OpenVAS, Nmap)
+- **web_app_test.py** - Web application security testing (OWASP ZAP, Burp Suite, XSSer)
+- **sql_injection_test.py** - SQL injection testing (SQLMap)
+- **xss_test.py** - XSS and CSRF detection (XSSer, XSStrike)
+- **auth_test.py** - Authentication and authorization testing (Hydra, default credentials)
+- **generate_report.py** - Penetration test report generation with CVSS scoring
+
+### Available Penetration Tester References
+Located in `references/` directory:
+
+- **attack_vectors.md** - Comprehensive attack vectors and exploitation techniques
+- **cvss_scoring.md** - CVSS v3.1 scoring guide with calculator
+- **testing_methodology.md** - PTES and OSSTMM testing methodologies
+- **tool_setup.md** - Penetration testing tool setup guide (Kali, Ubuntu, macOS, Windows, Cloud)
+
+### Script Usage Examples
+
+```bash
+# Reconnaissance scan
+python3 scripts/recon_scan.py target.com --format json --output recon_data.json
+
+# Vulnerability scanning
+python3 scripts/vuln_scan.py 192.168.1.0/24 --format text
+
+# Web application testing
+python3 scripts/web_app_test.py https://example.com --config config/pentest.yaml
+
+# SQL injection testing
+python3 scripts/sql_injection_test.py http://example.com/login --format json
+
+# XSS testing
+python3 scripts/xss_test.py http://example.com --output xss_report.txt
+
+# Authentication testing
+python3 scripts/auth_test.py http://example.com --brute-force --output auth_test.json
+
+# Generate penetration test report
+python3 scripts/generate_report.py --findings pentest_findings.json --output final_report.md
+```
+
+### Configuration Files
+
+Create `config/pentest.yaml` for script configuration:
+
+```yaml
+penetration_testing:
+  target_domains: []
+  wordlist: /usr/share/wordlists/dirb/common.txt
+  max_threads: 50
+  scan_depth: 3
+  
+  recon:
+    dns_enumeration: true
+    port_scanning: true
+    web_crawling: true
+    technology_detection: true
+    directory_brute_force: true
+    
+  vuln_scan:
+    scan_types: ['network', 'web', 'application']
+    severity_threshold: 'medium'
+    aggressive_scan: false
+    
+  web_app_test:
+    target_url: ''
+    auth_url: ''
+    auth_username: ''
+    auth_password: ''
+    scan_depth: 5
+    spider_enabled: true
+    active_scan_enabled: true
+    
+  sql_injection:
+    target_url: ''
+    test_level: 3
+    risk_level: 2
+    batch_mode: true
+    
+  xss_test:
+    target_url: ''
+    xss_payloads: ['<script>alert(1)</script>', '<img src=x onerror=alert(1)>']
+    crawl: true
+    
+  auth_test:
+    target_url: ''
+    username: ''
+    password_list: /usr/share/wordlists/rockyou.txt
+    brute_force_enabled: false
+    
+  report:
+    report_format: 'markdown'
+    include_cvss: true
+    include_poc: true
+    client_name: 'Client'
+    tester_name: 'Security Team'
+```
+
 ## Ethical Considerations
 - Scope definition and authorization
 - Data protection and privacy preservation

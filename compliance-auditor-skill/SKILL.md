@@ -143,6 +143,99 @@ grep -r "retention" procedures/ --include="*.md" --include="*.pdf"
 - Risk mitigation strategies
 - Compliance dashboard development
 
+## Skill-Specific Scripts and References
+
+### Available Compliance Auditor Scripts
+Located in `scripts/` directory:
+
+- **check_gdpr.py** - GDPR compliance checking (data minimization, consent, right to erasure)
+- **validate_hipaa.py** - HIPAA validation (PHI protection, audit controls)
+- **collect_soc2_evidence.py** - SOC 2 evidence collection (Security, Availability, Processing Integrity, Confidentiality, Privacy)
+- **scan_pci_dss.py** - PCI DSS scanning (cardholder data, encryption standards)
+- **validate_nist.py** - NIST controls validation (CSF, SP 800-53)
+- **assess_iso27001.py** - ISO 27001 assessment (ISMS controls)
+- **generate_report.py** - Compliance report generation
+
+### Available Compliance Auditor References
+Located in `references/` directory:
+
+- **gdpr_requirements.md** - GDPR requirements and compliance checks
+- **hipaa_guidelines.md** - HIPAA guidelines and controls
+- **soc2_controls.md** - SOC 2 Type 2 examination criteria and controls
+- **pci_dss_standard.md** - PCI DSS v4.0 requirements and compliance checklist
+- **nist_controls.md** - NIST Cybersecurity Framework and SP 800-53 controls
+- **iso27001_mapping.md** - ISO 27001 control mapping and implementation guidance
+
+### Script Usage Examples
+
+```bash
+# GDPR compliance check
+python3 scripts/check_gdpr.py . --config config/compliance.yaml --output gdpr_report.json
+
+# HIPAA validation
+python3 scripts/validate_hipaa.py . --format text
+
+# SOC 2 evidence collection
+python3 scripts/collect_soc2_evidence.py . --framework SOC2_Type2 --output soc2_evidence/
+
+# PCI DSS scanning
+python3 scripts/scan_pci_dss.py . --scan_level full
+
+# NIST controls validation
+python3 scripts/validate_nist.py . --framework CSF
+
+# ISO 27001 assessment
+python3 scripts/assess_iso27001.py . --controls annex_a --output iso_report.md
+
+# Generate compliance report
+python3 scripts/generate_report.py --evidence evidence/ --compliance SOC2 --output compliance_report.md
+```
+
+### Configuration Files
+
+Create `config/compliance.yaml` for script configuration:
+
+```yaml
+compliance_auditing:
+  audit_scope: '.'
+  frameworks: ['SOC2', 'GDPR', 'HIPAA', 'PCI_DSS', 'ISO27001', 'NIST']
+  
+  check_gdpr:
+    data_minimization: true
+    consent_management: true
+    right_to_erasure: true
+    data_portability: true
+    
+  validate_hipaa:
+    phi_protection: true
+    audit_controls: true
+    administrative_safeguards: true
+    physical_safeguards: true
+    technical_safeguards: true
+    
+  collect_soc2_evidence:
+    trust_services_criteria: ['security', 'availability', 'processing_integrity', 'confidentiality', 'privacy']
+    common_criteria: true
+    
+  scan_pci_dss:
+    scan_level: 'full'
+    cardholder_data_scope: true
+    encryption_standards: true
+    
+  validate_nist:
+    framework: 'CSF'
+    control_baselines: ['low', 'moderate', 'high']
+    
+  assess_iso27001:
+    controls: 'annex_a'
+    isms_controls: true
+    
+  generate_report:
+    report_format: 'markdown'
+    include_recommendations: true
+    include_roadmap: true
+```
+
 ### Policy & Procedure Templates
 - Security policy frameworks
 - Incident response procedures

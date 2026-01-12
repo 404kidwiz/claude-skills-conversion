@@ -164,25 +164,40 @@ Infrastructure:
 - Security: Calico network policies, OPA Gatekeeper
 ```
 
-### GitOps with ArgoCD
-```yaml
-# GitOps Workflow
-Source:
-- Git repository: git@github:company/k8s-manifests
-- Helm charts: Custom charts for applications
-- Environments: staging, production
+ ### GitOps with ArgoCD
+ ```yaml
+ # GitOps Workflow
+ Source:
+ - Git repository: git@github:company/k8s-manifests
+ - Helm charts: Custom charts for applications
+ - Environments: staging, production
+ 
+ Deployment:
+ - Tool: ArgoCD operator
+ - Sync strategy: Automatic with manual approval for production
+ - Rollback: Built-in rollback capabilities
+ - Monitoring: ArgoCD UI notifications
+ 
+ Multi-Cluster:
+ - Staging: On-premises cluster
+ - Production: Multi-cloud clusters (AWS, Azure, GCP)
+ - Sync: Application promotion between clusters
+ ```
 
-Deployment:
-- Tool: ArgoCD operator
-- Sync strategy: Automatic with manual approval for production
-- Rollback: Built-in rollback capabilities
-- Monitoring: ArgoCD UI notifications
-
-Multi-Cluster:
-- Staging: On-premises cluster
-- Production: Multi-cloud clusters (AWS, Azure, GCP)
-- Sync: Application promotion between clusters
-```
+ ### Script-Based Deployment Automation
+ ```bash
+ # Deploy application pod with Python script
+ python scripts/deploy_pod.py --image myapp:v1.0 --replicas 3 --namespace production
+ 
+ # Manage Helm charts across environments
+ python scripts/manage_helm_charts.py install --chart app-chart --values staging.yaml
+ 
+ # Execute rolling update with zero downtime
+ python scripts/rolling_update.py --deployment web-app --image new-image:v2.0
+ 
+ # Troubleshoot cluster issues
+ bash scripts/k8s_troubleshoot.sh --namespace production --component all
+ ```
 
 ### Custom Operator for Microservices
 ```yaml
@@ -205,8 +220,36 @@ Lifecycle Management:
 - Version upgrades with zero downtime
 - Configmap updates without restart
 - Rolling restart capabilities
-- Backup and restore procedures
-```
+ - Backup and restore procedures
+ ```
+
+## Automation Scripts
+
+### Deployment Scripts
+- **`scripts/deploy_pod.py`**: Automated pod deployment with configurable replicas, namespace, and resource limits
+- **`scripts/rolling_update.py`**: Zero-downtime rolling updates with health checks and rollback support
+- **`scripts/manage_helm_charts.py`**: Helm chart lifecycle management across multiple environments
+- **`scripts/k8s_troubleshoot.sh`**: Comprehensive cluster troubleshooting script for common issues
+
+## References
+
+### Documentation
+- **`references/k8s_quickstart.md`**: Quick start guide for Kubernetes cluster setup and basic operations
+- **`references/helm_patterns.md`**: Helm chart development patterns and best practices
+- **`references/production_guide.md`**: Production deployment guide with security and performance recommendations
+
+## Tool Restrictions
+
+### Required Tools
+- **Bash**: Required for executing kubectl and helm commands for cluster operations
+- **kubectl**: Essential CLI tool for Kubernetes cluster management
+- **helm**: Required for Helm chart operations and package management
+
+## Integration with Other Skills
+
+### Related Skills
+- **devops-engineer**: Collaborates on CI/CD pipelines, infrastructure automation, and GitOps workflows
+- **deployment-engineer**: Works together on application deployment strategies, release management, and orchestration
 
 ## Tools and Technologies
 

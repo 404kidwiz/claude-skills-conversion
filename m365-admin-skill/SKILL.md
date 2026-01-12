@@ -143,6 +143,19 @@ This skill automates and manages Microsoft 365 workloads through PowerShell and 
 - Monitoring: Add monitoring and alerting for critical workflows
 - Approval: Include approval workflows for high-impact changes
 
+## Automation Scripts and References
+
+The M365 admin skill includes comprehensive automation scripts and reference documentation located in:
+
+### Scripts (`scripts/` directory)
+- **create_m365_users.ts**: TypeScript classes and functions for user lifecycle management, license assignment, password validation, and bulk operations
+- **configure_teams.ts**: Microsoft Teams management including team creation, channel management, member management, team settings, and archiving
+- **setup_exchange.ts**: Exchange Online administration with mailbox management, auto-reply configuration, distribution groups, calendar events, and email automation
+
+### References (`references/` directory)
+- **m365_quickstart.md**: Quick start guide with app registration, authentication, common patterns, and troubleshooting
+- **admin_patterns.md**: Comprehensive patterns for user lifecycle, Teams templates, email automation, license management, security and compliance, and backup/recovery
+
 ## Output Format
 
 This skill delivers:

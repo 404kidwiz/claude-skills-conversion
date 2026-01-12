@@ -117,6 +117,94 @@ The architect reviewer uses standard development tools for code analysis:
 - Glob/Grep for codebase exploration and pattern detection
 - The skill does not directly execute architectural decisions or make production changes
 
+## Skill-Specific Scripts and References
+
+### Available Architect Reviewer Scripts
+Located in `scripts/` directory:
+
+- **analyze_patterns.py** - Architecture pattern analysis (microservices, monolith, event-driven, etc.)
+- **security_design_review.py** - Security design review (authentication, encryption, input validation)
+- **threat_model.py** - Threat modeling using STRIDE methodology
+- **identify_spof.py** - Single Point of Failure identification
+- **data_flow_analysis.py** - Data flow analysis and documentation
+- **assess_risk.py** - Risk assessment and scoring
+- **generate_docs.py** - Architecture documentation generation
+
+### Available Architect Reviewer References
+Located in `references/` directory:
+
+- **stride_methodology.md** - STRIDE threat modeling comprehensive guide
+- **attack_trees.md** - Attack tree analysis and construction
+- **architecture_principles.md** - Software architecture best practices and principles
+- **security_checklist.md** - Architecture security checklist
+
+### Script Usage Examples
+
+```bash
+# Architecture pattern analysis
+python3 scripts/analyze_patterns.py . --format json --output architecture_analysis.json
+
+# Security design review
+python3 scripts/security_design_review.py . --check-auth --check-encryption
+
+# Threat modeling
+python3 scripts/threat_model.py . --methodology STRIDE --output threat_model.json
+
+# Single Point of Failure identification
+python3 scripts/identify_spof.py . --check-dependencies --check-infrastructure
+
+# Data flow analysis
+python3 scripts/data_flow_analysis.py src/ --output data_flow.md
+
+# Risk assessment
+python3 scripts/assess_risk.py project/ --format text
+
+# Generate architecture documentation
+python3 scripts/generate_docs.py . --output architecture_docs/
+```
+
+### Configuration Files
+
+Create `config/architect.yaml` for script configuration:
+
+```yaml
+architecture_review:
+  project_root: '.'
+  file_patterns: ['*.py', '*.js', '*.java', '*.go', '*.ts']
+  check_for: ['microservices', 'monolith', 'event_driven', 'layered', 'hexagonal']
+  
+  analyze_patterns:
+    check_dependencies: true
+    check_infrastructure: true
+    check_services: true
+    
+  security_design_review:
+    check_auth: true
+    check_encryption: true
+    check_input_validation: true
+    check_authorization: true
+    
+  threat_model:
+    methodology: 'STRIDE'
+    scope: '.'
+    assets: []
+    
+  identify_spof:
+    check_dependencies: true
+    check_infrastructure: true
+    check_services: true
+    
+  assess_risk:
+    risk_matrix: 'quantitative'
+    likelihood_scale: ['low', 'medium', 'high']
+    impact_scale: ['low', 'medium', 'high']
+    
+  generate_docs:
+    format: 'markdown'
+    include_diagrams: true
+    include_data_flows: true
+```
+
 ## Integration with Other Skills
 
 The architect reviewer collaborates with:
