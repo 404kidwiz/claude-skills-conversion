@@ -20,17 +20,17 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 
 | Metric | Value |
 |---------|-------|
-| **Total Skills** | 133 |
+| **Total Skills** | 177 |
 | **Quality Compliance** | 100% Anthropic standards |
 | **Average Lines** | < 500 (concise, focused) |
-| **Coverage** | 12 major development domains |
+| **Coverage** | 14 major development domains |
 | **Auto-Discovery** | Yes (task-triggered) |
 
 ---
 
 ## 🏗️ Skills by Domain
 
-### Core Architecture (9 skills)
+### Core Architecture (10 skills)
 **Orchestration and strategic guidance**
 
 - **explore** - Contextual codebase analysis and pattern discovery
@@ -41,40 +41,60 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **multimodal-looker** - PDF, image, and diagram analysis
 - **general** - General-purpose agent for multi-step tasks
 - **build** - Build system specialist
+- **build-engineer** - Build system optimization and compilation speed expert
 - **plan** - Strategic planning agent
 
-### Code Quality & Utilities (4 skills)
+### Code Quality & Utilities (6 skills)
 **Review, debugging, and refactoring**
 
 - **code-reviewer** - Adversarial senior developer review (finds issues)
 - **debugger** - Debugging expert for production issues
 - **refactoring-specialist** - Safe, systematic code improvements
 - **dependency-manager** - Package management and upgrades
+- **error-detective** - Error analysis and resolution expert
+- **architect-reviewer** - Architecture review specialist
 
-### Language Specialists (23 skills)
+### Language Specialists (26 skills)
 **Framework and ecosystem expertise**
 
 **Web & Mobile:**
 - JavaScript Pro, TypeScript Pro, React Specialist
 - Vue Expert, Next.js Developer, Angular Architect
 - Flutter Expert, Kotlin Specialist, Swift Expert
+- Electron Pro - Desktop application expert
+- UI Designer - Visual design and interaction specialist
+- Frontend Developer - React, Vue, Angular specialist
+- Mobile Developer - Cross-platform mobile specialist
+- Mobile App Developer - Mobile application specialist
 
 **Backend & Systems:**
 - Python Pro, Go Pro, Java Architect
 - C# Developer, Rust Engineer, C++ Pro
 - PHP Pro
+- Elixir Expert - Elixir and OTP fault-tolerant systems
 
 **Full-Stack:**
 - .NET Framework 4.8 Expert, .NET Core Expert
+- Backend Developer - Server-side API specialist
+- Fullstack Developer - End-to-end feature development
 
 **Frameworks:**
 - Spring Boot Engineer, Rails Expert
 - Laravel Specialist, Django Developer
 
-### Infrastructure (19 skills)
+**Languages:**
+- SQL Pro - Database query expert
+- PowerShell 5.1 Expert - Legacy Windows automation
+- PowerShell 7 Expert - Cross-platform PowerShell automation
+
+**Real-time & Communication:**
+- WebSocket Engineer - Real-time communication specialist
+
+### Infrastructure (14 skills)
 **Cloud, DevOps, and platform engineering**
 
 - **cloud-architect** - Cloud architecture patterns (AWS, GCP, Azure)
+- **azure-infra-engineer** - Azure cloud infrastructure and automation expert
 - **kubernetes-specialist** - K8s deployments, services, operators
 - **deployment-engineer** - CI/CD pipelines, GitOps, releases
 - **database-administrator** - DB design, optimization, migrations
@@ -84,8 +104,11 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **performance-engineer** - Performance monitoring, optimization
 - **performance-testing** - Load testing, benchmarking
 - **terraform-engineer** - Infrastructure as Code patterns
+- **security-engineer** - Infrastructure security specialist
+- **platform-engineer** - Platform architecture expert
+- **network-engineer** - Network infrastructure specialist
 
-### Quality & Security (11 skills)
+### Quality & Security (14 skills)
 **Testing, accessibility, and security**
 
 - **accessibility-tester** - WCAG compliance, screen reader testing
@@ -99,8 +122,11 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **graphql-architect** - GraphQL schema and optimization
 - **fullstack-developer** - End-to-end application development
 - **seo-specialist** - Search engine optimization
+- **chaos-engineer** - System resilience testing expert
+- **powershell-security-hardening** - Windows PowerShell security hardening
+- **ad-security-reviewer** - Active Directory security specialist
 
-### Data & AI (10 skills)
+### Data & AI (15 skills)
 **Data engineering, ML, and AI systems**
 
 - **data-engineer** - ETL pipelines, data lakes, warehousing
@@ -113,8 +139,13 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **ai-engineer** - AI system integration
 - **ml-engineer** - Production ML systems
 - **prompt-engineer** - LLM prompt optimization
+- **data-analyst** - Data insights and visualization specialist
+- **postgres-pro** - PostgreSQL database expert
+- **devops-incident-responder** - DevOps incident management
+- **incident-responder** - System incident response expert
+- **error-detective** - Error analysis and resolution expert
 
-### Business & Product (8 skills)
+### Business & Product (12 skills)
 **Product management and technical analysis**
 
 - **product-manager** - Product strategy and requirements
@@ -125,8 +156,11 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **scrum-master** - Agile facilitation, sprint planning
 - **customer-success-manager** - Onboarding, training
 - **sales-engineer** - Technical sales support
+- **content-marketer** - Content marketing specialist
+- **legal-advisor** - Legal and compliance specialist
+- **wordpress-master** - WordPress development and optimization expert
 
-### Specialized Domains (10 skills)
+### Specialized Domains (14 skills)
 **Industry-specific expertise**
 
 - **api-documenter** - OpenAPI/Swagger documentation
@@ -138,9 +172,11 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **payment-integration** - Stripe, PayPal, Braintree
 - **quant-analyst** - Algorithmic trading, risk models
 - **risk-manager** - Risk assessment, mitigation
-- **seo-specialist** - SEO, analytics, optimization
+- **seo-specialist** - Search engine optimization
+- **m365-admin** - Microsoft 365 and Exchange Online administration
+- **windows-infra-admin** - Windows infrastructure and Active Directory automation
 
-### Developer Experience (7 skills)
+### Developer Experience (12 skills)
 **Tooling and workflow optimization**
 
 - **git-workflow-manager** - Git branching, PR workflows
@@ -150,6 +186,10 @@ A collection of 133 specialized Agent Skills that transforms Claude Code into an
 - **dx-optimizer** - Developer experience improvement
 - **documentation-engineer** - Technical documentation systems
 - **mcp-developer** - Model Context Protocol integration
+- **powershell-module-architect** - PowerShell module and profile architecture
+- **powershell-ui-architect** - PowerShell UI/UX specialist
+- **it-ops-orchestrator** - IT operations orchestration
+- **slack-expert** - Slack platform and @slack/bolt specialist
 
 ### Meta & Orchestration (8 skills)
 **Multi-agent coordination and workflow**
@@ -367,7 +407,7 @@ Skills trigger automatically when:
 
 | Repository | Stars | Skills | Focus | This Repo |
 |------------|--------|---------|-----------|-----------|
-| anthropics/skills (official) | 37,888 | 16 | Reference templates | **133 comprehensive skills** |
+| anthropics/skills (official) | 37,888 | 16 | Reference templates | **177 comprehensive skills** |
 | muratcankoylan/Agent-Skills | 6,432 | 18 | Context engineering | **12 major domains covered** |
 | ComposioHQ/awesome-claude-skills | 17,844 | 30 | Curated list | **Production-ready, not just a list** |
 | alirezarezvani/claude-skills | 552 | 42 | Real-world usage | **Largest single collection** |
@@ -401,12 +441,13 @@ Skills trigger automatically when:
 ## 🎉 What You Get
 
 **A complete development assistant ecosystem:**
-- 133 domain-expert skills covering 12 major areas
-- Auto-discovery that triggers the right skill at the right time
+- 177 domain-expert skills covering 14 major areas
+- Auto-discovery that triggers right skill at right time
 - Production-ready best practices built into every skill
 - Progressive disclosure keeps context efficient
 - Real-world examples and interactions for each skill
 - Tool restrictions for safety and security
+- 44 new skills from VoltAgent repository integration
 
 **Ready for immediate use!** 🚀
 
